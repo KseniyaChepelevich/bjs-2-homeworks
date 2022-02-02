@@ -14,7 +14,7 @@ function solveEquation(a, b, c) {
     } 
   return arr; // array
 }
-console.log(soloveEquation(1, -1, 0))
+
 
 
 function calculateTotalMortgage(percent, contribution, amount, date) {

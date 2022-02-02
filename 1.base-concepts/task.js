@@ -2,24 +2,19 @@
 
 function solveEquation(a, b, c) {
   let arr = [];
-  let x = 0;
-  let x1 = 0;
-  let x2 = 0;
-
+  
   let D = b ** 2 - 4 * a * c;
   
-  if (D < 0) {
+  if (D > 0) {
+    arr.push = (-b + Math.sqrt(D)) / (2 * a);
+    arr.push = (-b - Math.sqrt(D)) / ( 2 * a);
   } else if (D === 0) {
-      x = (-b) / (2 * a)
-      arr.push(x);
-    } else {
-        x1 = (-b + Math.sqrt(D)) / (2 * a);
-        arr.push(x1);
-        x2 = (-b - Math.sqrt(D)) / ( 2 * a);
-        arr.push(x2);
-      } 
+    arr.push = (-b) / (2 * a)
+      
+    } 
   return arr; // array
 }
+console.log(soloveEquation(1, -1, 0))
 
 
 function calculateTotalMortgage(percent, contribution, amount, date) {

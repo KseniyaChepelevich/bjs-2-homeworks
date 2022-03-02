@@ -42,9 +42,9 @@ class AlarmClock {
         checkClock = checkClock.bind(this.start);
 
         if(this.timerId === null) {
-            this.timerId = setInterval(() => {
+            setInterval(() => {
                 this.alarmCollection.forEach((item) => checkClock(item));                  
-            }, this.getCurrentFormattedTime)   
+            }, 1000)   
         }    
     }
 
@@ -68,20 +68,20 @@ class AlarmClock {
     }   
 }
 
-let phoneAlarm = new AlarmClock();
+/*let phoneAlarm = new AlarmClock();
 
-phoneAlarm.addClock("14:39", () => console.log("Пора вставать"), 1);
+phoneAlarm.addClock("15:27", () => console.log("Пора вставать"), 1);
 
-phoneAlarm.addClock("14:40", () => { console.log("Давай, вставай уже!"), phoneAlarm.removeClock(2)}, 2);
+phoneAlarm.addClock("15:28", () => { console.log("Давай, вставай уже!"), phoneAlarm.removeClock(2)}, 2);
 
-phoneAlarm.addClock("14:41", () => console.log("Иди умываться!"));
+phoneAlarm.addClock("15:29", () => console.log("Иди умываться!"));
 
-phoneAlarm.addClock("14:42", () => {
+phoneAlarm.addClock("15:30", () => {
     console.log("Вставай, а то проспишь!");
     phoneAlarm.clearAlarms();
     phoneAlarm.printAlarms();
 },3);
 
-phoneAlarm.addClock("14:43", () => console.log("Вставай, а то проспишь!"), 1)
+phoneAlarm.addClock("15:31", () => console.log("Вставай, а то проспишь!"), 1)
 
-phoneAlarm.printAlarms()
+phoneAlarm.printAlarms()*/

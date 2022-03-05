@@ -33,10 +33,10 @@ function debounceDecoratorNew(func, ms) {
 
   function wrapper(...args) {
     if (flag === false) {
-      func(...args);
+      func.call(this,...args);
       flag = true;
       timeout = setTimeout(() => {
-        flag = fals;
+        flag = false;
        }, ms);
       
     } else {
@@ -56,10 +56,10 @@ function debounceDecorator2(func, ms) {
 
   function wrapper(...args) {
     if (flag === false) {
-      func(...args);
+      func.call(this,...args);
       flag = true;
       timeout = setTimeout(() => {
-        flag = fals;
+        flag = false;
        }, ms);
       
     } else {
@@ -68,5 +68,6 @@ function debounceDecorator2(func, ms) {
     } 
     wrapper.count += 1
   }
+  
   return wrapper;
 }
